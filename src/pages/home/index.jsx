@@ -3,6 +3,7 @@ import background from '../../assets/background.png';
 import ItemList from '../../components/ItemList';
 import './styles.css';
 import { useState } from 'react';
+import Perfil from '../../components/Perfil';
 
 function App() {
   const [user, setUser] = useState('');
@@ -42,17 +43,7 @@ function App() {
           </div>
 
           {currentUser?.name ? (
-            <>
-              <div className='perfil'>
-                <img src={currentUser.avatar_url} className='profile' alt='profile' />
-                <div>
-                  <h3>{currentUser.name}</h3>
-                  <span>@{currentUser.login}</span>
-                  <p>{currentUser.bio}</p>
-                </div>
-              </div>
-              <hr />
-            </>
+            <Perfil avatar={currentUser.avatar_url} name={currentUser.name}  login={currentUser.login}  bio={currentUser.bio} ></Perfil>
           ):null}
           
           {repos?.length ? (
