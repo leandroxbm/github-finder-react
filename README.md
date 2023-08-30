@@ -1,4 +1,4 @@
-App para localizar usuários no github e listar os diretórios feito utilizando JavaScript e CSS
+App para localizar usuários no github e listar os diretórios feito utilizando React
 
 Para executar digite:
 ### `yarn`
